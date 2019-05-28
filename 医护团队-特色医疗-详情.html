@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>北大医疗,康复医院,北大医疗康复医院官网</title>
+    <meta name="keywords" content="北大医疗,康复医院" />
+    <meta name="description" content="北大医疗康复医院建于京城上北龙脉之左;北大医疗产业园中（昌平区中关村生命科学园内）。康复医院依托方正集团在医疗医药板块的全产业链实力，弥补了北京市康复医疗资源的匮乏。 北大医疗康复医院设定康复医疗服务和运营管理的高级标准，吸引国内外优秀人才落户，组建领先的康复医院团队，积极开展国家级的康复医学科研项目和国际医学合作项目。" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1102176_09mfj72ria68.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/second.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="heads">
+        <script>
+            $(".heads").load("header.html");
+        </script>
+    </div>
+    <!--轮播-->
+    <div class="main-md main-mds">
+        <div class="swiper-container" id="banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" >
+                    <img src="image/tsyll.jpg" class="im_pc " alt="">
+                    <!--<p class="hao">医保定点单位&nbsp;&nbsp;号 21152017</p>-->
+                    <img src="image/5p.jpg" class="im_mo " alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md main-mds">
+        <div class="hzfw">
+            <div class="zuobian">
+                <h1>
+                    医护团队
+                    <span>SHORTCUT ENTRY</span>
+                </h1>
+                <ul>
+                    <li><a href="#">专家团队</a></li>
+                    <li class="active"><a href="#">特色医疗</a></li>
+                    <li><a href="#">特色检查</a></li>
+                </ul>
+            </div>
+            <div class="youbian">
+                <div class="youbian-top">
+                    <h2>
+                        当前位置：
+                        <a href="#">首页 &gt;</a>
+                        <a href="#">医护团队 &gt;</a>
+                        <a href="#">特色医疗</a>
+                    </h2>
+                </div>
+                <div class="jieshao ttkf">
+                    <h1>疼痛康复</h1>
+                    <p>1、肌肉骨骼超声检查：包括肩关节、肘关节、腕关节、髋关节、膝关节及踝关节等关节部位相关疾病的诊断。</p>
+                    <p>2、用于康复治疗过程中：包括对深层肌肉收缩力度的观察评价，指导康复训练；动态观察肌肉、关节功能恢复状态，并进行有效评价。 </p>
+                    <p>3、超声引导下可视化精准治疗：包括（1）超声引导下对关节腔、滑囊、腱鞘等部位抽吸积液、注射治疗性药物；
+                        （2）超声引导下小针刀精准治疗靶组织；（3）超声引导下外周神经刺激及阻滞治疗；（4）超声引导下神经卡压部位注射治疗；
+                        （5）超声引导下肉毒素注射治疗等康复超声。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="foots">
+        <div class="main-md main-mds">
+            <script>
+                $(".foots .main-md").load("footer.html");
+            </script>
+        </div>
+    </div>
+    <script>
+        $('.youbian-content ul li').click(function () {
+            if($(this).attr('class')!='active'){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                $(this).children('.neirong').slideDown(300);
+                $(this).siblings().children('.neirong').slideUp(300);
+            }
+//            else{
+//                $(this).removeClass('active');
+//                $(this).next().slideUp(200);
+//            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>北大医疗,康复医院,北大医疗康复医院官网</title>
+    <meta name="keywords" content="北大医疗,康复医院" />
+    <meta name="description" content="北大医疗康复医院建于京城上北龙脉之左;北大医疗产业园中（昌平区中关村生命科学园内）。康复医院依托方正集团在医疗医药板块的全产业链实力，弥补了北京市康复医疗资源的匮乏。 北大医疗康复医院设定康复医疗服务和运营管理的高级标准，吸引国内外优秀人才落户，组建领先的康复医院团队，积极开展国家级的康复医学科研项目和国际医学合作项目。" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1102176_09mfj72ria68.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/second.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nxW0akynjKF8Ag0G0uVVwq0t6ak1Q1Zj"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="heads">
+        <script>
+            $(".heads").load("header.html");
+        </script>
+    </div>
+    <!--轮播-->
+    <div class="main-md main-mds">
+        <div class="swiper-container" id="banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" >
+                    <img src="image/kjrk.jpg" class="im_pc " alt="">
+                    <!--<p class="hao">医保定点单位&nbsp;&nbsp;号 21152017</p>-->
+                    <img src="image/2p.jpg" class="im_mo " alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md main-mds">
+        <div class="hzfw">
+            <div class="zuobian">
+                <h1>
+                    快捷入口
+                    <span>SHORTCUT ENTRY</span>
+                </h1>
+                <ul>
+                    <li><a href="#">门诊每周排班表</a></li>
+                    <li><a href="#">就诊流程</a></li>
+                    <li><a href="#">我想看门诊</a></li>
+                    <li><a href="#">我想住院</a></li>
+                    <li class="active"><a href="#">医院位置</a></li>
+                    <li><a href="#">交通路线</a></li>
+                </ul>
+            </div>
+            <div class="youbian">
+                <div class="youbian-top">
+                    <h2>
+                        当前位置：
+                        <a href="#">首页 &gt;</a>
+                        <a href="#">快捷入口 &gt;</a>
+                        <a href="#">医院位置</a>
+                    </h2>
+                </div>
+                <div class="youbian-content">
+                    <div class="jtlx">
+                        <ul>
+                            <li>
+                                <p>北大医疗康复医院:</p>
+                                <p>北京市昌平区中关村生命科学园生命园路8号北大医疗产业园7号楼</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 百度地图-->
+                    <div style="border:#ccc solid 1px;font-size:12px" id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="foots">
+        <div class="main-md main-mds">
+            <script>
+                $(".foots .main-md").load("footer.html");
+            </script>
+        </div>
+    </div>
+    <script>
+        $('.youbian-content ul li').click(function () {
+            if($(this).attr('class')!='active'){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                $(this).children('.neirong').slideDown(300);
+                $(this).siblings().children('.neirong').slideUp(300);
+            }
+//            else{
+//                $(this).removeClass('active');
+//                $(this).next().slideUp(200);
+//            }
+        })
+    </script>
+    <script>
+        /*百度地图*/
+        $(function(){
+            var map = new BMap.Map("map");
+            var point = new BMap.Point(116.277115,40.107069);
+            map.centerAndZoom(point, 18);                 // 初始化地图，设置中心点坐标和地图级别
+            //添加导航控件
+            map.addControl(new BMap.NavigationControl());
+            //添加缩放控件
+            map.addControl(new BMap.ScaleControl());
+            //添加概览图
+            map.addControl(new BMap.OverviewMapControl());
+            //添加地图类型控件
+            map.addControl(new BMap.MapTypeControl());
+            var marker = new BMap.Marker(point);
+            //默认动画
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+            //创建标注
+            map.addOverlay(marker);         //将标注添加到地图中
+            map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+            //信息提示的窗口
+            var opts = {
+                width : 100,     // 信息窗口宽度
+                height: 40,     // 信息窗口高度
+                title : "北大医疗康复医院" , // 信息窗口标题
+                enableMessage:true//设置允许信息窗发送短息
+            };
+            var infoWindow = new BMap.InfoWindow("地址：北京市昌平区中关村生命科学园生命园路8号北大医疗产业园7号楼", opts);  // 创建信息窗口对象
+            map.openInfoWindow(infoWindow,point); //开启信息窗口
+            marker.addEventListener("click", function(){
+                map.openInfoWindow(infoWindow,point); //开启信息窗口
+            });
+        })
+    </script>
+</body>
+</html>
